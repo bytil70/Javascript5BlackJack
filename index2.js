@@ -20,10 +20,10 @@ console.log(experience[1])
 
 let per = ['Per Harald Borgen', 35, true]
 
-let cards = [7, 4]
+let list = [7, 4]
 
 cards.push(6)
-console.log(cards) //output [7, 4, 6]
+console.log(list) //output [7, 4, 6]
 
 let messages = [
     'Hey, how\'s it going?',
@@ -142,3 +142,72 @@ let castle = {
 
 console.log(castle.price)
 console.log(castle.isSuperHost)
+
+// create a person object that contains 3 keys: name, age, and country
+// Use yourself as an example to set the values for name, age and country
+
+// Use a function, logData(), that use the person object t; create a 
+// string into the following format:
+// 'Burn is 69 years old and live in Hong Kong'
+
+// call the logData() function to verify that it works
+
+let person = {
+    name: 'Burn',
+    age: 69,
+    country: 'Hong Kong'
+}
+
+function logData () {
+    console.log(person.name + ' is ' + person.age + ' years old and live in ' + person.country)
+}
+
+logData() // output the person content
+
+// study if
+let age = 15
+if (age < 6) {
+    console.log('free')
+} else if (age < 18) {
+    console.log('child discount')
+} else if (age < 27) {
+    console.log('student discount')
+} else if (age < 67) {
+    console.log('full price')
+} else {
+    console.log('senior citizen discount')
+}
+
+//4:20 loops and array
+let largeCountries = ['China', 'India', 'USA', 'Indonesia', 'Pakistan']
+// use a for loop to log the countries to the cnsole
+
+console.log('The 5 largest Countries in the world:')
+for (let i = 0; i < largeCountries.length; i ++) {
+    console.log('- ' + largeCountries[i])
+}
+
+// Lesson 4: push, pop, unshift, shift challenge
+let bigCountries = ['Tavalu', 'India', 'USA', 'Indonesia', 'Monaco']
+// You need to fixup the bigCountries array so that
+// China and Pakistan are add back into their respective places
+
+// use push() and pop() and their counterparts unshift() and shift()
+// Google how to use unshift() and shift()
+
+bigCountries.pop() // del the last
+bigCountries.push('Pakistan') // add to the end
+bigCountries.shift() // del the first
+bigCountries.unsfift('China') // add it on the beginning
+console.log(bigCountries)
+
+// Lesson 5: Logical Operators
+let dayOfMonth = 13
+let weekday = 'Friday'
+
+// if it is Friday the 13th, log out this spooky face: 😱
+// use the logical 'And operator' -> &&
+
+if (dayOfMonth === 13 && weekday === 'Friday') {
+    console.log('😱')
+}
