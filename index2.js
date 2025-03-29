@@ -211,3 +211,35 @@ let weekday = 'Friday'
 if (dayOfMonth === 13 && weekday === 'Friday') {
     console.log('😱')
 }
+
+let hands = ['rock', 'paper', 'scissors']
+// create a function that returns a random item from the array
+
+// Lesson 6: random pick item
+function getHand() {
+    let randomIndex = Math.floor(Math.random() * 3) // 0-2.999999
+    return hands[randomIndex]
+}
+
+console.log(getHand())
+
+// Lesson 7: Sorting Fruits
+let fruit = ['🍎','🍊','🍎','🍊','🍎']
+let appleShelf = document.getElementById('apple-shelf')
+let orangeShelf = document.getElementById('orange-shelf')
+
+// create a function that put the apple onto the appleShelf
+// and the orange onto the orangeShelf. Use a for loop
+// a conditional statement, and the textContent property.
+
+function sortFruit() {
+    for (let i = 0; i < fruit.length; i ++) {
+        if (fruit[i] === '🍎') {
+            appleShelf.textContent += '🍎'
+        } else if (fruit[i] === '🍊') {
+            orangeShelf.textContent += '🍊'
+        }
+    }
+}
+
+sortFruit()
